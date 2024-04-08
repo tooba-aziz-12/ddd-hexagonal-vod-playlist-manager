@@ -1,0 +1,17 @@
+server:
+  port: 5015
+
+
+datasource:
+  vod-db:
+    url: jdbc:mysql://localhost:3306/vod_db
+    username: root
+    password: my-dhr-pwd
+
+liquibase:
+  datasource:
+    vod-db:
+      url: jdbc:mysql://localhost:3306/vod_db
+      username: root
+      password: my-dhr-pwd
+      changelog: classpath:migrations/local/db.changelog-local.xml
